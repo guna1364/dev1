@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'building new project'
+        sh 'echo " using new blue ocean pipe"'
       }
     }
     stage('deploy') {
@@ -11,5 +12,8 @@ pipeline {
         echo 'deploying'
       }
     }
+  }
+  environment {
+    devops = 'DVOPS'
   }
 }
